@@ -1,7 +1,7 @@
 # GidMaster_infra
 GidMaster Infra repository
 
-Assignment on my own:
+Home assignment:
 1. Get access to "someinternalhost" VM instance trough "bastion" from external host use one-liner connections string.
     Username: gpc.syrovatsky;
     Auth type: ssh-rsa;
@@ -50,3 +50,8 @@ Ansewer:
         IdentityFile ~/.ssh/gcp.syrovatsky
         User gcp.syrovatsky
 
+3. IP addresses for checking task with VPN-server:
+    bastion_IP = 35.210.14.191
+    someinternalhost_IP = 10.132.0.3
+    
+    URL_pritunl: "https://pritunl.35.210.14.191.sslip.io"
