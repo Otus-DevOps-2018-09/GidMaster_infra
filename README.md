@@ -1,10 +1,12 @@
 bastion_IP = 35.210.14.191
 someinternalhost_IP = 10.132.0.3
+testapp_IP = 
+testapp_port = 
 
 # GidMaster_infra
 GidMaster Infra repository
 
-Home assignment:
+Home assignment #3:
 1. Get access to "someinternalhost" VM instance trough "`bastion`" from external host use one-liner connections string.
 ```
 Username: gpc.syrovatsky;
