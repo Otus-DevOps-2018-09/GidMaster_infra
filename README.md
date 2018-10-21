@@ -1,7 +1,7 @@
 bastion_IP = 35.210.14.191
 someinternalhost_IP = 10.132.0.3
-testapp_IP = 
-testapp_port = 
+testapp_IP = 35.205.184.252
+testapp_port = 9292
 
 # GidMaster_infra
 GidMaster Infra repository
