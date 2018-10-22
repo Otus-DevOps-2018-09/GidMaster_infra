@@ -10,7 +10,7 @@ Additional tasks solution:
 
 1. Make configuration for puma-server using gcloud CLI to run VM instance with startup script:
 ```
-  sudo gcloud compute instances create reddit-app-startup-script \
+  sudo gcloud compute instances create reddit-app \
   --boot-disk-size=10GB \
   --image-family ubuntu-1604-lts \
   --image-project=ubuntu-os-cloud \
