@@ -2,18 +2,18 @@
     "builders": [
         {
             "type": "googlecompute",
-            "project_id": "{{user `my_project`}}",
+            "project_id": "{{user `project_id`}}",
             "image_name": "reddit-base-{{timestamp}}",
-            "image_family": "{{user `my_images`}}",
-            "source_image_family": "ubuntu-1604-lts",
+            "image_family": "{{user `img_family`}}",
+            "source_image_family": "{{user `src_img_family`}}",
             "zone": "europe-west1-d",
             "ssh_username": "{{user `connection_name`}}",
-            "machine_type": "{{user `machines`}}",
-            "image_description": "{{user `my_image_description`}}",
-            "disk_type": "{{user `my_disk_type`}}",
-            "disk_size": "{{user `disk_size_for_base_image`}}",
+            "machine_type": "{{user `machine_type`}}",
+            "image_description": "{{user `b_image_desc`}}",
+            "disk_type": "{{user `disk_type`}}",
+            "disk_size": "{{user `disk_size`}}",
             "network": "{{user `default_network`}}",
-            "tags": "{{user `puma_tags`}}"
+            "tags": "{{user `u_tags`}}"
         }
     ],
     "provisioners": [

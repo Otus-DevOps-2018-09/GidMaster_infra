@@ -1,11 +1,12 @@
 {
-    "my_project": "infra-project",
-    "my_images": "base-image",
-    "machines": "f1-micro",
+    "project_id": "infra-project",
+    "img_family": "base-image",
+    "src_img_family": "ubuntu-1604-lts",
     "connection_name": "appuser",
-    "my_image_description": "Test description",
-    "my_disk_type": "pd-standard",
-    "disk_size_for_base_image": "10",
+    "machine_type": "f1-micro",
+    "b_image_desc": "Test description",
+    "disk_type": "pd-standard",
+    "disk_size": "10",
     "default_network": "default",
-    "puma_tags": "some_tags"
+    "u_tags": "some_tags"
 }
