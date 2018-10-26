@@ -7,8 +7,13 @@
             "image_family": "{{user `my_images`}}",
             "source_image_family": "ubuntu-1604-lts",
             "zone": "europe-west1-d",
-            "ssh_username": "gcp.syrovatsky",
-            "machine_type": "{{user `machines`}}"
+            "ssh_username": "{{user `connection_name`}}",
+            "machine_type": "{{user `machines`}}",
+            "image_description": "{{user `my_image_description`}}",
+            "disk_type": "{{user `my_disk_type`}}",
+            "disk_size": "{{user `disk_size_for_base_image`}}",
+            "network": "{{user `default_network`}}",
+            "tags": "{{user `puma_tags`}}"
         }
     ],
     "provisioners": [
