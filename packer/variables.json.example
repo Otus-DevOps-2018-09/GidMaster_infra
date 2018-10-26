@@ -5,7 +5,7 @@
     "connection_name": "appuser",
     "my_image_description": "Test description",
     "my_disk_type": "pd-standard",
-    "disk_size_for_base_image": 10,
+    "disk_size_for_base_image": "10",
     "default_network": "default",
-    "puma_tags": ["some", "tags"]
+    "puma_tags": "some_tags"
 }
