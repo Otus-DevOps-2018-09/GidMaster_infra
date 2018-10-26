@@ -1,0 +1,5 @@
+{
+    "my_project": "infra-my_project",
+    "my_images": "my_images-base",
+    "machines": "machine"
+}
