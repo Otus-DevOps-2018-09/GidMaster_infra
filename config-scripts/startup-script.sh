@@ -15,4 +15,3 @@ cd reddit && bundle install
 puma -d
 # MOTD
 echo "Hello world!"
-
