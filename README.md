@@ -100,3 +100,11 @@ Additional tasks solution:
   --rules tcp:9292 \
   --direction INGRESS \
 ```
+## Home assignment #5:
+
+1. Studied foundation of Packer usage.
+2. Made 1st packer template "`packer\ubuntu16.json`" with testApp installation.
+3. Deployed testApp from VM image based on Packer template, ehich created before.
+4. Parameterized Packer template with help of "`packer\variables.json`".
+5. Made "baked" VM image with help of Packer template "`packer\immutable.json`".
+6. Made script for automatic VM instance creation from "baked" VM image.
