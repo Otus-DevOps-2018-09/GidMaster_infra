@@ -11,7 +11,7 @@ resource "google_compute_instance" "app" {
   tags         = ["reddit-app"]
 
   metadata {
-    ssh-keys = "gcp.syrovatsky:${file(var.public_key_path)}"
+    ssh-keys = "appuser2:${file(var.public_key_path)}gappuser1:${file(var.public_key_path)}gcp.syrovatsky:${file(var.public_key_path)}"
   }
 
   boot_disk {
