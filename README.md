@@ -9,6 +9,9 @@ someinternalhost_IP = 10.132.0.3
 GidMaster Infra repository
 
 ## Home assignment #3:
+
+### Tasks solution:
+
 1. Get access to "someinternalhost" VM instance trough "`bastion`" from external host use one-liner connections string.
 ```
 Username: gpc.syrovatsky;
@@ -76,7 +79,7 @@ URL_pritunl: "https://pritunl.35.210.14.191.sslip.io"
 
 ## Home assignment #4:
 
-Additional tasks solution:
+### Additional tasks solution:
 
 1. Make configuration for puma-server using gcloud CLI to run VM instance with startup script:
 ```
@@ -101,6 +104,8 @@ Additional tasks solution:
   --direction INGRESS \
 ```
 ## Home assignment #5:
+
+### Task solution:
 
 1. Studied foundation of Packer usage.
 2. Made 1st packer template "`packer\ubuntu16.json`" with testApp installation.
