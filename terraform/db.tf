@@ -7,7 +7,8 @@ resource "google_compute_instance" "db" {
       initialize_params {
           image = "${var.db_disk_image}"
       }
- network_interface {
+  }
+  network_interface {
       network = "default"
       access_config = {}
   }
@@ -22,7 +23,7 @@ resource "google_compute_firewall" "firewall_mongo" {
       protocol = "tcp"
       ports = ["27017"]
   }
-  source_tags = ["reddot-app"]
+  source_tags = ["reddit-app"]
   target_tags = ["reddit-db"]
 }
-}
+

@@ -24,10 +24,10 @@ variable zone {
   default     = "europe-west1-d"
 }
 variable app_disk_image {
-  dsecription = "Disk image for redit app"
+  description = "Disk image for redit app"
   default = "reddit-app-base"
 }
-variabla db_disk_image {
+variable db_disk_image {
   description = "Disk image for reddit db",
   default = "reddit-db-base"
 }
