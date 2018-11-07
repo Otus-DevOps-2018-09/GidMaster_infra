@@ -12,12 +12,10 @@ variable "env" {
 }
 
 variable "app_tags" {
-  description = ["reddit-app", "stage"]
-
+  default = ["reddit-app", "stage"]
 }
 
 variable "db_tags" {
-  description = ["reddit-db", "stage"]
-
+  default = ["reddit-db", "stage"]
 }
 
