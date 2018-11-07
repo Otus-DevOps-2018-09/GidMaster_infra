@@ -27,3 +27,9 @@ variable "fw_app_rule_name" {
   description = "Firewall rule name"
   default = "allow-app-default"
 }
+
+variable "redit-app" {
+  description = "Application instance name"
+  default = "redit-app"
+}
+

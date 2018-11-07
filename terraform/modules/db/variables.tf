@@ -26,3 +26,8 @@ variable "fw_db_rule_name" {
   description = "Firewall rule name"
   default = "allow-mongo-default"
 }
+
+variable "redit-db" {
+  description = "DB instance Name"
+  default = "reddit-db"
+}
