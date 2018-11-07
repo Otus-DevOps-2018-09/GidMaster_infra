@@ -1,5 +1,5 @@
 resource "google_compute_instance" "app" {
-  name = "redit-app"
+  name = "${var.redit-app}"
   machine_type = "f1-micro"
   zone = "${var.zone}"
   tags = "${var.app_tags}"
