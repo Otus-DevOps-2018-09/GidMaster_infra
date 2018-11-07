@@ -11,3 +11,18 @@ variable db_disk_image {
   description = "Disk image for reddit db",
   default = "reddit-db-base"
 }
+
+variable "db_tags" {
+  description = "Tags for DB instance"
+  default = ["reddit-db"]
+}
+
+variable "app_tags" {
+  description = "Tags for App instance"
+  default = ["reddit-app"]
+}
+
+variable "fw_db_rule_name" {
+  description = "Firewall rule name"
+  default = "allow-mongo-default"
+}

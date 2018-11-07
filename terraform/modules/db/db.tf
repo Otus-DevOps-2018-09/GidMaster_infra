@@ -2,7 +2,7 @@ resource "google_compute_instance" "db" {
   name = "reddit-db"
   machine_type = "f1-micro"
   zone = "${var.zone}"
-  tags = ["reddit-db"]
+  tags = "${var.db_tags}"
   boot_disk {
       initialize_params {
           image = "${var.db_disk_image}"
@@ -17,13 +17,13 @@ resource "google_compute_instance" "db" {
   }
 }
 resource "google_compute_firewall" "firewall_mongo" {
-  name = "allow-mongo-default"
+  name = "${var.fw_db_rule_name}"
   network = "default"
   allow {
       protocol = "tcp"
       ports = ["27017"]
   }
-  source_tags = ["reddit-app"]
-  target_tags = ["reddit-db"]
+  source_tags = "${var.app_tags}"
+  target_tags = "${var.db_tags}"
 }
 

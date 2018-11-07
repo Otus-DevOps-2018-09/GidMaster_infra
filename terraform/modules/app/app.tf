@@ -2,7 +2,7 @@ resource "google_compute_instance" "app" {
   name = "redit-app"
   machine_type = "f1-micro"
   zone = "${var.zone}"
-  tags = ["reddit-app"]
+  tags = "${var.app_tags}"
   boot_disk {
       initialize_params {
           image = "${var.app_disk_image}"
@@ -19,15 +19,15 @@ resource "google_compute_instance" "app" {
   }
 }
 resource "google_compute_address" "app_ip" {
-  name = "reddit-app-ip"
+  name = "${var.app_ip_name}"
 }
 resource "google_compute_firewall" "firewall_puma" {
-  name = "allow-puma-default"
+  name = "${var.fw_app_rule_name}"
   network = "default"
   allow {
       protocol = "tcp"
       ports = ["9292"]
   }
   source_ranges = ["0.0.0.0/0"]
-  target_tags = ["reddit-app"]
+  target_tags = "${var.app_tags}"
 }
