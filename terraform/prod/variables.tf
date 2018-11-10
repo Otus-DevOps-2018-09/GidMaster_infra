@@ -37,3 +37,7 @@ variable "db_disk_image" {
   description = "Disk image for redit db"
   default     = "reddit-db-base"
 }
+
+variable "bucket" {
+  description = "bucket name for backup state file"
+}

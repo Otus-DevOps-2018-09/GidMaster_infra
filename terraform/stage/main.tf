@@ -3,6 +3,12 @@ provider "google" {
   project = "${var.project}"
   region  = "${var.region}"
 }
+terraform {
+  backend "gcs" {
+    bucket  = "gcp-syrovatsky-bucket-2"
+    prefix  = "terraform/state"
+  }
+}
 
 module "app" {
   source           = "../modules/app"
