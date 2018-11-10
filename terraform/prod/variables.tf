@@ -29,8 +29,10 @@ variable "zone" {
 
 variable "app_disk_image" {
   description = "Disk image for redit app"
+  default = "reddit-app-base"
 }
 
 variable "db_disk_image" {
   description = "Disk image for redit db"
+  default = "reddit-db-base"
 }
