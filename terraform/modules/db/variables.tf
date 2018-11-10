@@ -1,3 +1,13 @@
+variable "fw_db_rule_name" {
+  description = "Firewall rule name"
+  default = "allow-mongo-default"
+}
+
+variable "redit-db" {
+  description = "DB instance Name"
+  default = "reddit-db"
+}
+
 variable "public_key_path" {
   description = "Path to the public key used for ssh access"
 }
@@ -22,12 +32,3 @@ variable "app_tags" {
   default = ["reddit-app"]
 }
 
-variable "fw_db_rule_name" {
-  description = "Firewall rule name"
-  default = "allow-mongo-default"
-}
-
-variable "redit-db" {
-  description = "DB instance Name"
-  default = "reddit-db"
-}

@@ -1,8 +1,8 @@
-variable project {
+variable "project" {
   description = "Project ID"
 }
 
-variable region {
+variable "region" {
   description = "Region"
   default     = "europe-west1"
 }
@@ -12,10 +12,10 @@ variable "env" {
 }
 
 variable "app_tags" {
-  default = ["reddit-app", "stage"]
+  default = ["reddit-app", "prod"]
 }
 
 variable "db_tags" {
-  default = ["reddit-db", "stage"]
+  default = ["reddit-db", "prod"]
 }
 

@@ -1,4 +1,14 @@
 
+variable "fw_app_rule_name" {
+  description = "Firewall rule name"
+  default = "allow-app-default"
+}
+
+variable "redit-app" {
+  description = "Application instance name"
+  default = "redit-app"
+}
+
 variable "public_key_path" {
   description = "Path to the public key used for ssh access"
 }
@@ -22,14 +32,3 @@ variable "app_tags" {
   description = "Tags for App instance"
   default = ["reddit-app"]
 }
-
-variable "fw_app_rule_name" {
-  description = "Firewall rule name"
-  default = "allow-app-default"
-}
-
-variable "redit-app" {
-  description = "Application instance name"
-  default = "redit-app"
-}
-
