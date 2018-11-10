@@ -12,6 +12,7 @@ module "app" {
   app_ip_name = "reddit-app-ip-${var.env}"
   fw_app_rule_name = "allow-app-default-${var.env}"
   app_tags = "${var.app_tags}"
+  redit-app = "redit-app-${var.env}"
 }
 
 module "db" {
@@ -22,10 +23,11 @@ module "db" {
   fw_db_rule_name = "allow-mongo-default-${var.env}"
   db_tags = "${var.db_tags}"
   app_tags = "${var.app_tags}"
+  reddit-db = "reddit-db-${var.env}"
 }
 
 module "vpc" {
   source = "../modules/vpc"
   source_ranges = ["0.0.0.0/0"]
+  name_ssh = "default-allow-ssh-${var.env}"
 }
-
