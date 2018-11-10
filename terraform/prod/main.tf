@@ -23,7 +23,7 @@ module "db" {
   fw_db_rule_name = "allow-mongo-default-${var.env}"
   db_tags = "${var.db_tags}"
   app_tags = "${var.app_tags}"
-  redit-db = "redit-db-${var.env}"
+  reddit-db = "reddit-db-${var.env}"
 }
 
 module "vpc" {
