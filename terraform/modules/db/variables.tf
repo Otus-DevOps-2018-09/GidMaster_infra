@@ -3,7 +3,7 @@ variable "fw_db_rule_name" {
   default = "allow-mongo-default"
 }
 
-variable "redit-db" {
+variable "reddit-db" {
   description = "DB instance Name"
   default = "reddit-db"
 }
