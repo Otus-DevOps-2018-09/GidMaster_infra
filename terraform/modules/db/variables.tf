@@ -1,11 +1,11 @@
 variable "fw_db_rule_name" {
   description = "Firewall rule name"
-  default = "allow-mongo-default"
+  default     = "allow-mongo-default"
 }
 
 variable "reddit-db" {
   description = "DB instance Name"
-  default = "reddit-db"
+  default     = "reddit-db"
 }
 
 variable "public_key_path" {
@@ -18,17 +18,16 @@ variable "zone" {
 }
 
 variable "db_disk_image" {
-  description = "Disk image for reddit db",
-  default = "reddit-db-base"
+  description = "Disk image for reddit db"
+  default     = "reddit-db-base"
 }
 
 variable "db_tags" {
   description = "Tags for DB instance"
-  default = ["reddit-db"]
+  default     = ["reddit-db"]
 }
 
 variable "app_tags" {
   description = "Tags for App instance"
-  default = ["reddit-app"]
+  default     = ["reddit-app"]
 }
-

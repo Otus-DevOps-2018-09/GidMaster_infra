@@ -18,6 +18,7 @@ variable "app_tags" {
 variable "db_tags" {
   default = ["reddit-db", "stage"]
 }
+
 variable "public_key_path" {
   description = "Work Path to public key"
 }
@@ -29,10 +30,10 @@ variable "zone" {
 
 variable "app_disk_image" {
   description = "Disk image for redit app"
-  default = "reddit-app-base"
+  default     = "reddit-app-base"
 }
 
 variable "db_disk_image" {
   description = "Disk image for redit db"
-  default = "reddit-db-base"
+  default     = "reddit-db-base"
 }
