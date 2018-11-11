@@ -113,3 +113,19 @@ URL_pritunl: "https://pritunl.35.210.14.191.sslip.io"
 4. Parameterized Packer template with help of "`packer\variables.json`".
 5. Made "baked" VM image with help of Packer template "`packer\immutable.json`".
 6. Made script for automatic VM instance creation from "baked" VM image.
+
+## Home assigmnet #5:
+
+1. Stadied foundation of Terraform usage.
+2. Installed Terraform on Host machine.
+3. Made 1st Terraform resourse.
+4. Applied new VM with help of Terraform.
+5. Checked results of apply with help of "`terraform show`" and terraform output vars.
+6. Made "`firewall`" resourse.
+7. Made provisioners to prepare and run instance with alredy runned application.
+8. Used input variables to protect sensetive data.
+9. Made input varables for `SSH private key` and `zone`.
+10. Formatted *.tf files with "`terraform fmt`".
+11. Made task with *:
+* Described ssh-keys multiply users in metadata;
+* Added appuser_web through Web interface. As a consicvense we got "`configuration drift`"
