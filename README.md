@@ -109,7 +109,7 @@ Additional tasks solution:
 5. Made "baked" VM image with help of Packer template "`packer\immutable.json`".
 6. Made script for automatic VM instance creation from "baked" VM image.
 
-## Home assigmnet #5:
+## Home assigmnet #6:
 
 1. Studied foundation of Terraform usage.
 2. Installed Terraform on Host machine.
@@ -125,7 +125,7 @@ Additional tasks solution:
 * Described ssh-keys multiply users in metadata;
 * Added appuser_web through Web interface. As a consicvense we got "`configuration drift`"
 
-## Home assignment #6:
+## Home assignment #7:
 1. Imported exeisting structure to terraform state file.
 2. Studied something about external resourses and dependecies.
 3. Made my first own structure of resourses.
