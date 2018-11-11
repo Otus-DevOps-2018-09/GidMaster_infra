@@ -20,6 +20,7 @@ module "app" {
   app_tags         = "${var.app_tags}"
   redit-app        = "redit-app-${var.env}"
   private_key_path = "${var.private_key_path}"
+  reddit_db_addr   = "${module.db.db_internal_ip}"
 }
 
 module "db" {

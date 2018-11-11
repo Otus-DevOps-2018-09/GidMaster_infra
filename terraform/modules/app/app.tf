@@ -30,7 +30,7 @@ resource "google_compute_instance" "app" {
   }
 
   provisioner "file" {
-    source      = ".././files/puma.service"
+    source      = "/files/puma.service"
     destination = "/tmp/puma.service"
   }
 

@@ -35,3 +35,7 @@ variable "app_tags" {
   description = "Tags for App instance"
   default     = ["reddit-app"]
 }
+
+variable reddit_db_addr {
+  description = "Mongo DB IP address"
+}
