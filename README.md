@@ -111,7 +111,7 @@ Additional tasks solution:
 
 ## Home assigmnet #5:
 
-1. Stadied foundation of Terraform usage.
+1. Studied foundation of Terraform usage.
 2. Installed Terraform on Host machine.
 3. Made 1st Terraform resourse.
 4. Applied new VM with help of Terraform.
@@ -124,3 +124,15 @@ Additional tasks solution:
 11. Made task with *:
 * Described ssh-keys multiply users in metadata;
 * Added appuser_web through Web interface. As a consicvense we got "`configuration drift`"
+
+## Home assignment #6:
+1. Imported exeisting structure to terraform state file.
+2. Studied something about external resourses and dependecies.
+3. Made my first own structure of resourses.
+4. Used modules instead of sturucture.
+5. Parametrized modules.
+6. Made prod and stage configuration with module's re-usage.
+7. Studied abuot modles registry.
+8. Made task with *:
+* Configured storaging state file on remote backend. Checked by removing local state file. 
+* Added provisioners into modules to run already deployed application with DB.
