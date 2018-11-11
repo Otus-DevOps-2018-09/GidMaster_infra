@@ -19,6 +19,7 @@ module "app" {
   fw_app_rule_name = "allow-app-default-${var.env}"
   app_tags         = "${var.app_tags}"
   redit-app        = "redit-app-${var.env}"
+  private_key_path = "${var.private_key_path}"
 }
 
 module "db" {
