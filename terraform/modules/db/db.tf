@@ -16,12 +16,12 @@ resource "google_compute_instance" "db" {
   }
 
   metadata {
-    ssh-keys = "gcp.syrovatsky:${file(var.public_key_path)}"
+    ssh-keys = "appuser:${file(var.public_key_path)}"
   }
   
   connection {
     type        = "ssh"
-    user        = "gcp.syrovatsky"
+    user        = "appuser"
     agent       = false
     private_key = "${file("${var.private_key_path}")}"
   } 

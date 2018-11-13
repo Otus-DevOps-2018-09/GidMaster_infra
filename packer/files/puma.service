@@ -4,8 +4,8 @@ After=network.target
 
 [Service]
 Type=simple
-User=gcp.syrovatsky
-WorkingDirectory=/home/gcp.syrovatsky/reddit
+User=appuser
+WorkingDirectory=/home/appuser/reddit
 ExecStart=/usr/bin/bundle exec puma
 ExecReload=/bin/kill -USR1 $MAINPID
 Restart=no

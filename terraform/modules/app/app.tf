@@ -19,12 +19,12 @@ resource "google_compute_instance" "app" {
   }
 
   metadata {
-    ssh-keys = "gcp.syrovatsky:${file(var.public_key_path)}"
+    ssh-keys = "appuser:${file(var.public_key_path)}"
   }
 
   connection {
     type        = "ssh"
-    user        = "gcp.syrovatsky"
+    user        = "appuser"
     agent       = false
     private_key = "${file(var.private_key_path)}"
   }
@@ -36,8 +36,8 @@ resource "google_compute_instance" "app" {
 
   provisioner "remote-exec" {
     inline = [
-      "echo 'export DATABASE_URL=${var.reddit_db_addr}' > /home/gcp.syrovatsky/.bash_profile",
-      "chown gcp.syrovatsky:gcp.syrovatsky /home/gcp.syrovatsky/.bash_profile"
+      "echo 'export DATABASE_URL=${var.reddit_db_addr}' > /home/appuser/.bash_profile",
+      "chown appuser:appuser /home/appuser/.bash_profile"
     ]
   }
 

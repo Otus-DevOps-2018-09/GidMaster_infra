@@ -20,7 +20,7 @@
     {
       "type": "file",
       "source": "files/puma.service",
-      "destination": "/home/gcp.syrovatsky/puma.service"
+      "destination": "/home/appuser/puma.service"
     },
     {
         "type": "shell",

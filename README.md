@@ -17,7 +17,7 @@ Proxy host: bastion.
 ```
 Answer:
 
-Command: `ssh -t -i ~/.ssh/gcp.syrovatsky -A gcp.syrovatsky@bastion 'ssh someinternalhost'`  
+Command: `ssh -t -i ~/.ssh/appuser -A appuser@bastion 'ssh someinternalhost'`  
 
 Arguments:
 * ssh - Open SSH session;
@@ -44,12 +44,12 @@ Minimal configuration should look:
 ```
 Host someinternalhost
     ForwardAgent yes
-    User gcp.syrovatsky
-    ProxyCommand ssh -v -t -i ~/.ssh/gcp.syrovatsky -A gcp.syrovatsky@bastion nc %h %p
+    User appuser
+    ProxyCommand ssh -v -t -i ~/.ssh/appuser -A appuser@bastion nc %h %p
 ```
 Where:
 * "ForwardAgent yes" - Specifies whether the connection to the authentication agent (if any) will be forwarded to the remote machine.
-* "User gcp.syrovatsky" - current user for connection
+* "User appuser" - current user for connection
 * "ProxyCommand" - Command that should be executed to get access to remote machine.
 *     You can see that is a little diffirent from previous assignment. instead of "ssh someinternalhost" we use "nc %h %p".
 
@@ -59,12 +59,12 @@ But I decided to modify "`~/.ssh/config`" to make it more useful for future use:
 ```
 Host someinternalhost
     ForwardAgent yes
-    User gcp.syrovatsky
+    User appuser
     ProxyCommand ssh -v bastion nc %h %p
 Host bastion
     HostName [IP_ADDRESS_OF_BASTION]
-    IdentityFile ~/.ssh/gcp.syrovatsky
-    User gcp.syrovatsky
+    IdentityFile ~/.ssh/appuser
+    User appuser
 ```
 
 3. IP addresses for checking task with VPN-server:
