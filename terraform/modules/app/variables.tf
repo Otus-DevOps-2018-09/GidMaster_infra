@@ -36,6 +36,6 @@ variable "app_tags" {
   default     = ["reddit-app"]
 }
 
-variable reddit_db_addr {
+variable "reddit_db_addr" {
   description = "Mongo DB IP address"
 }

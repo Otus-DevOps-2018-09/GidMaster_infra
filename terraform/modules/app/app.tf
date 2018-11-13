@@ -30,12 +30,19 @@ resource "google_compute_instance" "app" {
   }
 
   provisioner "file" {
-    source      = "/files/puma.service"
+    source      = "../modules/app/files/puma.service"
     destination = "/tmp/puma.service"
   }
 
   provisioner "remote-exec" {
-    script = "files/deploy.sh"
+    inline = [
+      "echo 'export DATABASE_URL=${var.reddit_db_addr}' > /home/gcp.syrovatsky/.bash_profile",
+      "chown gcp.syrovatsky:gcp.syrovatsky /home/gcp.syrovatsky/.bash_profile"
+    ]
+  }
+
+  provisioner "remote-exec" {
+    script = "../modules/app/files/deploy.sh"
   }
 }
 
