@@ -148,3 +148,9 @@ Additional tasks solution:
 8. Made simple playbook and implemented. Cheked how it works. _Note_: If playbook changes state of host, we will see number of changes in reply.
 9. Made task with *:
 * To create dynamical inventory you should use a script file which returns JSON message. Inventory.py gets data about external IP's from terraform output and insert them into JSON message.
+
+## Home assignment #9:
+1. Studied about diffirent scenarious of implementation playbooks and plays. (One playbook one play. One playbook many plays, several playbooks) 
+2. Studied about templates, modules and handlers.
+3. Complited task with *. Used gce.py to create dynamic inventory. _created service account. Added credentials into *.ini file. Added gce.py int ansible.cfg as defaulr inventory file._
+4. Integrated ansible configuration into packer configurations.
