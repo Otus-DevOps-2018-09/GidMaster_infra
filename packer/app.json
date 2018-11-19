@@ -1,0 +1,29 @@
+{
+    "variables": {
+	    "image_family": "reddit-app-base",
+	    "image_description": "Ubuntu 16.04 with MongoDB prebaked for reddit-app"
+    },
+    "builders": [
+        {
+            "type": "googlecompute",
+            "project_id": "{{user `project_id`}}",
+            "image_name": "reddit-app-base",
+            "image_family": "{{user `img_family`}}",
+            "source_image_family": "{{user `src_img_family`}}",
+            "zone": "europe-west1-d",
+            "ssh_username": "{{user `connection_name`}}",
+            "machine_type": "{{user `machine_type`}}",
+            "image_description": "{{user `image_family`}}",
+            "disk_type": "{{user `disk_type`}}",
+            "disk_size": "{{user `disk_size`}}",
+            "network": "{{user `default_network`}}"
+        }
+    ],
+    "provisioners": [
+        {
+            "type": "shell",
+            "script": "scripts/install_ruby.sh",
+            "execute_command": "sudo {{.Path}}"
+	} 
+    ]
+}

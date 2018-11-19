@@ -1,4 +1,5 @@
-project = "your_project_id"
-public_key_path = "~/.ssh/appuser.pub"
-private_key_path = "~/.ssh/appuser"
+project = "my-project"
+public_key_path = "~/.ssh/userapp.pub"
 disk_image = "reddit-base"
+private_key_path = "~/.ssh/uesrapp"
+

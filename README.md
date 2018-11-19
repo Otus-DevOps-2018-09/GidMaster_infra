@@ -20,7 +20,7 @@ Proxy host: bastion.
 ```
 Answer:
 
-Command: `ssh -t -i ~/.ssh/gcp.syrovatsky -A gcp.syrovatsky@bastion 'ssh someinternalhost'`  
+Command: `ssh -t -i ~/.ssh/appuser -A appuser@bastion 'ssh someinternalhost'`  
 
 Arguments:
 * ssh - Open SSH session;
@@ -47,12 +47,12 @@ Minimal configuration should look:
 ```
 Host someinternalhost
     ForwardAgent yes
-    User gcp.syrovatsky
-    ProxyCommand ssh -v -t -i ~/.ssh/gcp.syrovatsky -A gcp.syrovatsky@bastion nc %h %p
+    User appuser
+    ProxyCommand ssh -v -t -i ~/.ssh/appuser -A appuser@bastion nc %h %p
 ```
 Where:
 * "ForwardAgent yes" - Specifies whether the connection to the authentication agent (if any) will be forwarded to the remote machine.
-* "User gcp.syrovatsky" - current user for connection
+* "User appuser" - current user for connection
 * "ProxyCommand" - Command that should be executed to get access to remote machine.
 *     You can see that is a little diffirent from previous assignment. instead of "ssh someinternalhost" we use "nc %h %p".
 
@@ -62,12 +62,12 @@ But I decided to modify "`~/.ssh/config`" to make it more useful for future use:
 ```
 Host someinternalhost
     ForwardAgent yes
-    User gcp.syrovatsky
+    User appuser
     ProxyCommand ssh -v bastion nc %h %p
 Host bastion
     HostName [IP_ADDRESS_OF_BASTION]
-    IdentityFile ~/.ssh/gcp.syrovatsky
-    User gcp.syrovatsky
+    IdentityFile ~/.ssh/appuser
+    User appuser
 ```
 
 3. IP addresses for checking task with VPN-server:
@@ -114,9 +114,9 @@ URL_pritunl: "https://pritunl.35.210.14.191.sslip.io"
 5. Made "baked" VM image with help of Packer template "`packer\immutable.json`".
 6. Made script for automatic VM instance creation from "baked" VM image.
 
-## Home assigmnet #5:
+## Home assigmnet #6:
 
-1. Stadied foundation of Terraform usage.
+1. Studied foundation of Terraform usage.
 2. Installed Terraform on Host machine.
 3. Made 1st Terraform resourse.
 4. Applied new VM with help of Terraform.
@@ -129,3 +129,15 @@ URL_pritunl: "https://pritunl.35.210.14.191.sslip.io"
 11. Made task with *:
 * Described ssh-keys multiply users in metadata;
 * Added appuser_web through Web interface. As a consicvense we got "`configuration drift`"
+
+## Home assignment #7:
+1. Imported exeisting structure to terraform state file.
+2. Studied something about external resourses and dependecies.
+3. Made my first own structure of resourses.
+4. Used modules instead of sturucture.
+5. Parametrized modules.
+6. Made prod and stage configuration with module's re-usage.
+7. Studied abuot modles registry.
+8. Made task with *:
+* Configured storaging state file on remote backend. Checked by removing local state file. 
+* Added provisioners into modules to run already deployed application with DB.
