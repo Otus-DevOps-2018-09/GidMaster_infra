@@ -3,9 +3,9 @@ variable "fw_app_rule_name" {
   default     = "allow-app-default"
 }
 
-variable "redit-app" {
+variable "reddit-app" {
   description = "Application instance name"
-  default     = "redit-app"
+  default     = "reddit-app"
 }
 
 variable "public_key_path" {

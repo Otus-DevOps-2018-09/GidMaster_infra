@@ -16,11 +16,10 @@ module "app" {
   public_key_path  = "${var.public_key_path}"
   zone             = "${var.zone}"
   app_disk_image   = "${var.app_disk_image}"
-  app_ip_name      = "reddit-app-ip-${var.env}"
-  fw_app_rule_name = "allow-app-default-${var.env}"
+  app_ip_name      = "reddit-app-ip"
+  fw_app_rule_name = "allow-app-default"
   app_tags         = "${var.app_tags}"
-  redit-app        = "redit-app-${var.env}"
-  private_key_path = "${var.private_key_path}"
+  reddit-app       = "app"
   reddit_db_addr   = "${module.db.db_internal_ip}"
 }
 
@@ -29,15 +28,14 @@ module "db" {
   public_key_path  = "${var.public_key_path}"
   zone             = "${var.zone}"
   db_disk_image    = "${var.db_disk_image}"
-  fw_db_rule_name  = "allow-mongo-default-${var.env}"
+  fw_db_rule_name  = "allow-mongo-default"
   db_tags          = "${var.db_tags}"
   app_tags         = "${var.app_tags}"
-  private_key_path = "${var.private_key_path}"
-  reddit-db        = "reddit-db-${var.env}"
+  reddit-db        = "db"
 }
 
 module "vpc" {
   source        = "../modules/vpc"
   source_ranges = ["109.194.34.184/32"]
-  name_ssh      = "default-allow-ssh-${var.env}"
+  name_ssh      = "default-allow-ssh"
 }
