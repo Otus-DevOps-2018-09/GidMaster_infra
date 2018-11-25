@@ -6,5 +6,6 @@
 .terraform/
 /env/
 *.retry
-/ansible/gce.ini
+**/gce.ini
 /ansible/infra-219309-key.json
+/ansible/roles/jdauphant.nginx
