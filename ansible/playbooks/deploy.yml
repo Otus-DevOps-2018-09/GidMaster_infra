@@ -16,5 +16,5 @@
   handlers:
   - name: reload puma
     become: true
-    service: name=puma state=restarted 
+    service: name=puma state=restarted
 
