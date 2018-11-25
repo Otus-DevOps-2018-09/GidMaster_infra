@@ -102,7 +102,7 @@ Additional tasks solution:
 ```
 ## Home assignment #5:
 
-1. Studied foundation of Packer usage.
+1. Learned foundation of Packer usage.
 2. Made 1st packer template "`packer\ubuntu16.json`" with testApp installation.
 3. Deployed testApp from VM image based on Packer template, ehich created before.
 4. Parameterized Packer template with help of "`packer\variables.json`".
@@ -111,7 +111,7 @@ Additional tasks solution:
 
 ## Home assigmnet #6:
 
-1. Studied foundation of Terraform usage.
+1. Learned foundation of Terraform usage.
 2. Installed Terraform on Host machine.
 3. Made 1st Terraform resourse.
 4. Applied new VM with help of Terraform.
@@ -127,18 +127,18 @@ Additional tasks solution:
 
 ## Home assignment #7:
 1. Imported exeisting structure to terraform state file.
-2. Studied something about external resourses and dependecies.
+2. Learned something about external resourses and dependecies.
 3. Made my first own structure of resourses.
 4. Used modules instead of sturucture.
 5. Parametrized modules.
 6. Made prod and stage configuration with module's re-usage.
-7. Studied abuot modles registry.
+7. Learned abuot modles registry.
 8. Made task with *:
 * Configured storaging state file on remote backend. Checked by removing local state file. 
 * Added provisioners into modules to run already deployed application with DB.
 
 ## Home assignment #8:
-1. Studied base ansible. About modules, functions, inventory options, files structure.
+1. Learned base ansible. About modules, functions, inventory options, files structure.
 2. Installed ansible on local machine.
 3. Made base INI inventory file.
 4. Made base YAML inventory file.
@@ -150,7 +150,18 @@ Additional tasks solution:
 * To create dynamical inventory you should use a script file which returns JSON message. Inventory.py gets data about external IP's from terraform output and insert them into JSON message.
 
 ## Home assignment #9:
-1. Studied about diffirent scenarious of implementation playbooks and plays. (One playbook one play. One playbook many plays, several playbooks) 
-2. Studied about templates, modules and handlers.
+1. Learned about diffirent scenarious of implementation playbooks and plays. (One playbook one play. One playbook many plays, several playbooks) 
+2. Learned about templates, modules and handlers.
 3. Complited task with *. Used gce.py to create dynamic inventory. _created service account. Added credentials into *.ini file. Added gce.py int ansible.cfg as defaulr inventory file._
 4. Integrated ansible configuration into packer configurations.
+
+## Home assignment #10:
+1. Learned about roles (include registry ansible-galaxy) and environments in Ansible. Awered something about disadvantages and advantages.
+2. Created roles for app and db instances also used community role from ansible-galaxy registry. 
+3. Made configurations for prod and stage environment (include group_vars). For checking created additional task to show current environment.
+4. Reorganized playbooks.
+5. Made nginx proxy server for app to have opportunity connect to app via 80/tcp port. Modified terraform configuration, modified "`app.yml`" playbook and used community role "`jdauphant.nginx`".
+6. Discovered work with ansible vault.
+7. Created users, uncrypted sensetive information by ansible vault. Created additionasl task to create users on VM instances.
+8. Tasks with *:
+* used dynamic inventory (gce.py) instead of static inventory file.
