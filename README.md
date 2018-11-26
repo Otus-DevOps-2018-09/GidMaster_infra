@@ -162,6 +162,6 @@ Additional tasks solution:
 4. Reorganized playbooks.
 5. Made nginx proxy server for app to have opportunity connect to app via 80/tcp port. Modified terraform configuration, modified "`app.yml`" playbook and used community role "`jdauphant.nginx`".
 6. Discovered work with ansible vault.
-7. Created users, uncrypted sensetive information by ansible vault. Created additionasl task to create users on VM instances.
+7. Created users, uncrypted sensetive information by ansible vault. Created additionasl task to create users on VM instances, checked.
 8. Tasks with *:
 * used dynamic inventory (gce.py) instead of static inventory file.
