@@ -5,7 +5,6 @@
     - role: app
     - role: jdauphant.nginx
       nginx_user: "{{ deploy_user }}"
-      nginx_keep_only_specified: true
       nginx_http_params:
       - sendfile "on"
       - access_log "/var/log/nginx/access.log"
