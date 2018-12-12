@@ -170,3 +170,4 @@ URL_pritunl: "https://pritunl.35.210.14.191.sslip.io"
 7. Created users, uncrypted sensetive information by ansible vault. Created additionasl task to create users on VM instances, checked.
 8. Tasks with *:
 * used dynamic inventory (gce.py) instead of static inventory file.
+
