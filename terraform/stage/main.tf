@@ -20,7 +20,6 @@ module "app" {
   fw_app_rule_name = "allow-app-default-${var.env}"
   app_tags         = "${var.app_tags}"
   redit-app        = "redit-app-${var.env}"
-  private_key_path = "${var.private_key_path}"
   reddit_db_addr   = "${module.db.db_internal_ip}"
 }
 
@@ -32,7 +31,6 @@ module "db" {
   fw_db_rule_name  = "allow-mongo-default-${var.env}"
   db_tags          = "${var.db_tags}"
   app_tags         = "${var.app_tags}"
-  private_key_path = "${var.private_key_path}"
   reddit-db        = "reddit-db-${var.env}"
 }
 

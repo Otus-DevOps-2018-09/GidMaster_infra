@@ -5,3 +5,6 @@
 *.tfvars
 .terraform/
 /env/
+*.retry
+/ansible/gce.ini
+/ansible/infra-219309-key.json
