@@ -141,3 +141,15 @@ URL_pritunl: "https://pritunl.35.210.14.191.sslip.io"
 8. Made task with *:
 * Configured storaging state file on remote backend. Checked by removing local state file. 
 * Added provisioners into modules to run already deployed application with DB.
+
+## Home assignment #8:
+1. Studied base ansible. About modules, functions, inventory options, files structure.
+2. Installed ansible on local machine.
+3. Made base INI inventory file.
+4. Made base YAML inventory file.
+5. Configured "`ansible.cfg`" to use default settings. Sucj as inventory file, keys path, etc.
+6. Worked with a different modules as "`ping`", "`shell`", "`command`", "`systemd`", "`service`". Looked on advanteges and disadventeges different modules.
+7. Worked with group of hosts.
+8. Made simple playbook and implemented. Cheked how it works. _Note_: If playbook changes state of host, we will see number of changes in reply.
+9. Made task with *:
+* To create dynamical inventory you should use a script file which returns JSON message. Inventory.py gets data about external IP's from terraform output and insert them into JSON message.
