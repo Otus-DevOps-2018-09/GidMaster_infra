@@ -1,5 +1,5 @@
 resource "google_compute_instance" "app" {
-  name         = "${var.redit-app}"
+  name         = "${var.reddit-app}"
   machine_type = "f1-micro"
   zone         = "${var.zone}"
   tags         = "${var.app_tags}"
@@ -33,7 +33,7 @@ resource "google_compute_firewall" "firewall_puma" {
 
   allow {
     protocol = "tcp"
-    ports    = ["9292"]
+    ports    = ["9292", "80"]
   }
 
   source_ranges = ["0.0.0.0/0"]

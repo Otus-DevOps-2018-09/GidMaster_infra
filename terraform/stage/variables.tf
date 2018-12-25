@@ -12,11 +12,11 @@ variable "env" {
 }
 
 variable "app_tags" {
-  default = ["reddit-app", "stage"]
+  default = ["reddit-app", "stage", "app"]
 }
 
 variable "db_tags" {
-  default = ["reddit-db", "stage"]
+  default = ["reddit-db", "stage", "db"]
 }
 
 variable "public_key_path" {

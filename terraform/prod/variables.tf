@@ -12,19 +12,15 @@ variable "env" {
 }
 
 variable "app_tags" {
-  default = ["reddit-app", "prod"]
+  default = ["reddit-app", "prod", "app"]
 }
 
 variable "db_tags" {
-  default = ["reddit-db", "prod"]
+  default = ["reddit-db", "prod", "db"]
 }
 
 variable "public_key_path" {
   description = "Work Path to public key"
-}
-
-variable private_key_path {
-  description = "Path to the private key used for ssh access"
 }
 
 variable "zone" {

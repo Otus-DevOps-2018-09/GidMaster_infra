@@ -1,0 +1,5 @@
+db_host: 10.142.0.2 
+app_nginx_port: 9292
+server_name: "reddit"
+nginx_port: 80
+
