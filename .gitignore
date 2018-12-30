@@ -9,4 +9,10 @@
 **/gce.ini
 /ansible/infra-219309-key.json
 /ansible/roles/jdauphant.nginx
-
+# Vagrant and molecule
+.vagrant/
+*.log
+*.pyc
+.molecule
+.cache
+.pytest_cache
